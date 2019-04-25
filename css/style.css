@@ -1,0 +1,92 @@
+/*全局设置 ，外边距字体及字体样式，把borders和padding全都包含在定义的宽高里*/
+*{
+	margin: 0;
+	padding: 0;font-family: "montserrat",sans-serif;
+	box-sizing: border-box;
+}
+
+/*背景设置、拉伸、内边距*/
+.services-section{
+	background-image: url(../img/bg.jpg);
+	background-size: cover;
+	padding: 60px 0;	
+}
+
+/*框设置，上下内边距为0左右内边距为20，内容溢出元素框时内容会被修剪，并且其余内容是不可见的。*/
+.inner-width{
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+	padding: 0 20px;
+	overflow: hidden;
+}
+
+/*元素中的文本的水平对齐方式，文本颜色，大小控制文本仅为大写*/
+.service-title{
+	text-align: center;
+	color: #ddd;
+	text-transform: uppercase;
+	font-size: 50px;	
+}
+
+/*宽高设置，背景色，外边距*/
+.border{
+	width: 160px;
+	height: 2px;
+	background-color: #82ccdd;
+	margin: 40px auto;	
+}
+/*弹性布局，元素换行 ，元素在页面上居中排列 */
+.service-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;	
+}
+/*基于包含它的块级对象的百分比最大宽度，光标呈现为指示链接的指针*/
+.service-box{
+	max-width: 33.33%;
+	padding: 10px;
+	text-align: center;
+	color: #ddd;
+	cursor: pointer;
+}
+/*元素应该生成的框的类型行内块元素，边框为实线，旋转度数*/
+.service-icon{
+	display: inline-block;
+	width: 70px;
+	height: 70px;
+	border: 3px solid #82ccdd;
+	color: #82CCDD;
+	transform: rotate(45deg);
+	margin-bottom: 30px;
+	margin-top: 16px;
+}
+
+/*行高*/
+.service-icon i{
+	line-height: 70px;
+	transform: rotate(-45deg);
+	font-size: 26px;
+}
+
+.service-box:hover .service-icon{
+	background: #82CCDD;
+	color: #DDDDDD;	
+}
+
+.selection-title{
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+
+.service-des{
+	font-size: 14px;	
+}
+
+/*只有在屏幕尺寸小于960像素的时候才会应用下面的样式*/
+@media  screen and (max-width: 960px) {
+	.service-box{
+		max-width: 45%;
+	}
+}
